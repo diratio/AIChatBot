@@ -1,12 +1,12 @@
 # AIChatBot
 
-# 🤖 Telegram AI Chatbot (Google Gemini + Files Support)
+#  Telegram AI Chatbot (Google Gemini + Files Support)
 
 Многофункциональный Telegram-бот с интегрированным искусственным интеллектом (**Google Gemini**), способный вести контекстный диалог, отвечать на любые вопросы и анализировать прикрепленные документы (`PDF`, `TXT`, `DOCX`).
 
 ---
 
-## 🚀 Основные возможности
+##  Основные возможности
 
 * **Интеллектуальный чат:** Общение с языковой моделью Google Gemini с сохранением контекста беседы (история диалога).
 * **Работа с документами:** Загрузка и анализ файлов формата **PDF, TXT и DOCX** (с автоматическим извлечением текста и ограничением по размеру/объему).
@@ -30,6 +30,23 @@
 ## 📦 Установка и запуск
 
 ### 1. Клонирование репозитория / переход в папку проекта
-Откройте терминал (например, MSYS2 UCRT64 или командную строку) и перейдите в папку с проектом:
+Откройте терминал и перейдите в папку с проектом:
 ```bash
 cd "путь/к/ вашему/проекту"
+
+# Создание окружения
+python -m venv .venv
+
+# Активация (для Windows / MSYS2)
+source .venv/Scripts/activate
+source .venv/bin/activate
+
+pip install --upgrade pip
+pip install aiogram google-genai pypdf python-docx python-dotenv
+
+#Вставьте туда
+BOT_TOKEN=ваш_токен_телеграм_бота_от_BotFather
+GEMINI_TOKEN=ваш_апи_ключ_от_Google_AI_Studio
+
+#Запуск
+python ./main.py
